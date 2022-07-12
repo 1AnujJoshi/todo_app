@@ -8,11 +8,11 @@ mongoose.connect('mongodb://localhost/todo_app_db');
 const db = mongoose.connection;
 
 //error
-db.on('error', function(err) { console.log(err.message); });
+db.on('error', function (err) {
+  console.log(err.message);
+});
 
 //up and running then print the message
-db.once('open', function() {
-  
-    console.log("Successfully connected to the database");
-
+db.once('open', function () {
+  console.log('Successfully connected to the database');
 });
