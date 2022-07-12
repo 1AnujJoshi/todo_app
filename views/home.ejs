@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            <%= title%>
+        </title>
+        <script src="https://kit.fontawesome.com/a6ec278789.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        
+        <!--  Header of the app  -->
+         <div id="header">
+                 <h1><i class="fa-solid fa-clipboard-list"></i> &nbsp; MY TO-DO APP</h1>
+        </div>
+        <!--  creating form -->
+                    <form action="/create-todo" method="post">
+                            
+                        <!-- container for description -->
+                            <div class="desContainer">
+                                <label for="description"><h5>DESCRIPTION</h5> </label> 
+                                <input id="description"  type="text" name="description" required placeholder="What do you need to do?">
+                            </div>
+
+                        <!-- container for category and date input fields -->
+                            <div class="categoryDateContainer">
+                                <div class="categoryContainer">
+
+                                    <!-- adding label and creating dropdown menu -->
+                                    <label for="category"><h5>CATEGORY</h5></label>
+                                        <select name="category" id="category" required>
+                                            <option value="Personal">Personal</option>
+                                            <option value="Work">Work</option>
+                                            <option value="Cleaning">Cleaning</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                </div>
+                                <!-- creating date container -->
+                                <div class="dateContainer">
+                                    <label for="date"><H5>DUE DATE</H5> </label>
+                                    <input type="text" name ="created_at" required id="date" placeholder="DD-MM-YYYY" onfocus="(this.type='date')">
+                                </div>
+                            </div>
+
+                            <!-- submit button for form -->
+                            <div class="submitButton">             
+                                <input type="submit" id="addTask" value="+ Add Task" >
+                            </div>
+                    </form>
+            
+                    <!-- // ordered list to show ToDo list to user -->
+                    <ol>     
+                        <% for (let i of todo_app) { %>
+                            <li>
+                                <!--  creating todo list to be shown to user -->
+                                <div class="todo-list">
+                                    <!-- storing description and date in same div and category amd delete button in others -->
+                                    <div class="desc-date-container">
+                                        <div class="description-container">
+                                            <p><%= i.description %></p>
+                                        </div>
+                                        <!-- adding icon and some space in date container -->
+                                        <div class="date-container" >
+                                          <p> <i class="fa-solid fa-calendar-check"></i>&nbsp;&nbsp;&nbsp; <%= i.created_at %></p>
+                                        </div>
+                                    </div>
+                                    <div class="category-container">         
+                                        <p><%= i.category %></p>
+                                    </div>
+                                    <!-- creating delete button to delete a todo list -->
+                                    <div class="delete-button">
+                                        <a href="/delete-contact/?id=<%= i._id %>">
+                                            <i class="fa-solid fa-square-xmark"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        <% } %>
+                    </ol>
+        
+        <script type="text/javascript" src="/js/home.js"></script> 
+    </body>
+</html>
