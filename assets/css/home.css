@@ -1,133 +1,135 @@
-body{
-    margin:5% 20% 5% 20%;
-    font-family: sans-serif;
-    background-color: #7eb549;
+body {
+  margin: 5% 20% 5% 20%;
+  font-family: sans-serif;
+  /* background-color: #7eb549; */
+  background-color: white;
 }
 
-h5{
-    color: #0f059f;
-    margin: 10px;
+h5 {
+  color: #0f059f;
+  margin: 10px;
 }
-
 
 /* CSS FOR HEADER */
 
-#header{
-    margin-top: -50px;
-    display: flex;
-    justify-content: center;
-    color: #0f059f;
-    width: 100%;
-    min-height: 20%;
+#header {
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  color: #0f059f;
+  width: 100%;
+  min-height: 20%;
 }
 
 /* CSS FOR FORM   */
 
-label{
-    font-size: 2rem;
-    width: 100%;
-} 
-
-input,select{
-    width: 100%;
-    height: 2.5rem;
-    font-size: 1.5rem;
+label {
+  font-size: 2rem;
+  width: 100%;
 }
 
-.desContainer{
-    margin: 10px;
-    width: 100%;
-    min-height: 20%;
-    border-top: 2px solid white;
-    padding: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+input,
+select {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.categoryDateContainer{
-    margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 20%;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    padding: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.desContainer {
+  margin: 10px;
+  width: 100%;
+  min-height: 20%;
+  border-top: 2px solid white;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.categoryContainer,.dateContainer{
-    width: 49%;
-} 
-
-#addTask{
-    width: 12rem;
-    background-color: white;
-    height: 3.5rem;
-    color:#0f059f;
-    font-size: 2rem;
+.categoryDateContainer {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 20%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-#addTask:hover{
-    background-color: #0f059f;
-    color:white;
+.categoryContainer,
+.dateContainer {
+  width: 49%;
 }
 
-.submitButton{
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px 50px 0px;
+#addTask {
+  width: 12rem;
+  background-color: white;
+  height: 3.5rem;
+  color: #0f059f;
+  font-size: 2rem;
+}
+
+#addTask:hover {
+  background-color: #0f059f;
+  color: white;
+}
+
+.submitButton {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px 50px 0px;
 }
 
 /* CSS FOR THE TODO LIST */
 
-.todo-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid white;
-    width: 100%;
-    margin: 5px 20px 0px 20px;
-    background-color: aliceblue;
+.todo-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  width: 100%;
+  margin: 5px 20px 0px 20px;
+  background-color: aliceblue;
 }
 
-ol{
-    background-color: #0f059f;
-    color: azure;
+ol {
+  background-color: #0f059f;
+  color: azure;
 }
 
-ol li:hover{
-    background-color: rgb(255, 0, 0);
+ol li:hover {
+  background-color: rgb(255, 0, 0);
 }
 
-.desc-date-container{
-    width: 70%;
-    min-height: 20%;
-    color: rgb(83, 83, 83);
-    font-size: 1.5rem;
-    margin-left: 2rem;
+.desc-date-container {
+  width: 70%;
+  min-height: 20%;
+  color: rgb(83, 83, 83);
+  font-size: 1.5rem;
+  margin-left: 2rem;
 }
 
-.category-container{
-    width: 10%;
-    text-align: center;
-    background-color:#0f059f;
-    color: #e7e4e4;
-    min-height: 20%;
+.category-container {
+  width: 10%;
+  text-align: center;
+  background-color: #0f059f;
+  color: #e7e4e4;
+  min-height: 20%;
 }
 
-.category-container:hover{
-    background-color: white;
-    color: #0f059f;
+.category-container:hover {
+  background-color: white;
+  color: #0f059f;
 }
 
-.delete-button{
-    width: 4%;
+.delete-button {
+  width: 4%;
 }
 
-.delete-button i:hover{
-    color: red;
+.delete-button i:hover {
+  color: red;
 }
